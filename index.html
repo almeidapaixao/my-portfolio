@@ -71,10 +71,6 @@
       📄 Download Almeida's Résumé (English Version)
     </a>
 
-    <div class="visitor-counter">
-      👀 Number of visitors: <span id="visitor-count">Loading...</span>
-    </div>
-
     <div class="contacts">
       <p>
         <a href="https://wa.me/5511984218991" target="_blank">
@@ -96,17 +92,5 @@
         </a>
       </p>
     </div>
-
-    <script>
-      // Incrementa e busca número de visitas da CountAPI
-      fetch("https://api.countapi.xyz/hit/almeidapaixao.dev/visits")
-        .then((res) => res.json())
-        .then((data) => {
-          document.getElementById("visitor-count").innerText = data.value;
-        })
-        .catch(() => {
-          document.getElementById("visitor-count").innerText = "Unavailable";
-        });
-    </script>
   </body>
 </html>
