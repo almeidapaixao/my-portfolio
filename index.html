@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Almeida Paixão from LinkedIn</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        color: #333;
+        text-align: center;
+        padding: 40px;
+      }
+
+      h1 {
+        margin-bottom: 40px;
+        font-size: 36px;
+      }
+
+      .button {
+        display: inline-block;
+        margin: 20px;
+        padding: 20px 40px;
+        font-size: 24px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .button:hover {
+        background-color: #0056b3;
+      }
+
+      .contacts {
+        margin-top: 50px;
+        font-size: 18px;
+      }
+
+      .contacts a {
+        margin: 10px;
+        text-decoration: none;
+        color: #333;
+        display: inline-block;
+      }
+
+      .contacts img {
+        vertical-align: middle;
+        width: 28px;
+        height: 28px;
+        margin-right: 8px;
+      }
+
+      .visitor-counter {
+        margin-top: 30px;
+        font-size: 20px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Almeida Paixão Portfolio</h1>
+
+    <a href="almeida_dev_resume_ptbr.pdf" class="button" download>
+      📄 Baixar Currículo do Almeida (PT-BR)
+    </a>
+    <a href="almeida_dev_resume.pdf" class="button" download>
+      📄 Download Almeida's Résumé (English Version)
+    </a>
+
+    <div class="visitor-counter">
+      👀 Number of visitors: <span id="visitor-count">Loading...</span>
+    </div>
+
+    <div class="contacts">
+      <p>
+        <a href="https://wa.me/5511984218991" target="_blank">
+          <img
+            src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4f2.svg"
+            alt="WhatsApp"
+          />
+          +55 11 98421-8991 (WhatsApp)
+        </a>
+      </p>
+      <p>
+        <a href="mailto:paixaowork5@gmail.com">
+          📧 paixaowork5@gmail.com
+        </a>
+      </p>
+      <p>
+        <a href="https://www.linkedin.com/in/almeidapaixao/" target="_blank">
+          🔗 LinkedIn
+        </a>
+      </p>
+    </div>
+
+    <script>
+      // Incrementa e busca número de visitas da CountAPI
+      fetch("https://api.countapi.xyz/hit/almeidapaixao.dev/visits")
+        .then((res) => res.json())
+        .then((data) => {
+          document.getElementById("visitor-count").innerText = data.value;
+        })
+        .catch(() => {
+          document.getElementById("visitor-count").innerText = "Unavailable";
+        });
+    </script>
+  </body>
+</html>
