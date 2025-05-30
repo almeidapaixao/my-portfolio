@@ -2,62 +2,98 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Almeida Paixão from LinkedIn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Almeida Paixão Portfolio</title>
     <style>
+      :root {
+        --python-blue: #306998;
+        --python-yellow: #ffd43b;
+        --text-dark: #222;
+        --background-light: #f9f9f9;
+        --button-hover: #204d74;
+        --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
-        font-family: Arial, sans-serif;
-        background: #f4f4f4;
-        color: #333;
+        font-family: var(--font-main);
+        background: var(--background-light);
+        color: var(--text-dark);
+        padding: 40px 20px;
         text-align: center;
-        padding: 40px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
 
       h1 {
+        font-size: 2.5rem;
         margin-bottom: 40px;
-        font-size: 36px;
+        color: var(--python-blue);
       }
 
       .button {
         display: inline-block;
         margin: 20px;
-        padding: 20px 40px;
-        font-size: 24px;
-        background-color: #007bff;
+        padding: 18px 36px;
+        font-size: 1.2rem;
+        background-color: var(--python-blue);
         color: white;
         border: none;
-        border-radius: 12px;
+        border-radius: 10px;
         text-decoration: none;
         transition: background-color 0.3s ease;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
       }
 
       .button:hover {
-        background-color: #0056b3;
+        background-color: var(--button-hover);
       }
 
       .contacts {
         margin-top: 50px;
-        font-size: 18px;
+        font-size: 1rem;
       }
 
       .contacts a {
-        margin: 10px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
         text-decoration: none;
-        color: #333;
-        display: inline-block;
+        color: var(--text-dark);
+        margin: 10px auto;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      .contacts a:hover {
+        color: var(--python-blue);
       }
 
       .contacts img {
-        vertical-align: middle;
-        width: 28px;
-        height: 28px;
-        margin-right: 8px;
+        width: 24px;
+        height: 24px;
       }
 
-      .visitor-counter {
-        margin-top: 30px;
-        font-size: 20px;
-        color: #555;
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        .button {
+          font-size: 1rem;
+          padding: 14px 28px;
+        }
+
+        .contacts {
+          font-size: 0.95rem;
+        }
       }
     </style>
   </head>
@@ -65,10 +101,10 @@
     <h1>Almeida Paixão Portfolio</h1>
 
     <a href="almeida_dev_resume_ptbr.pdf" class="button" download>
-      📄 Baixar Currículo do Almeida (PT-BR)
+      📄 Baixar Currículo (PT-BR)
     </a>
     <a href="almeida_dev_resume.pdf" class="button" download>
-      📄 Download Almeida's Résumé (English Version)
+      📄 Download Résumé (English)
     </a>
 
     <div class="contacts">
@@ -88,7 +124,7 @@
       </p>
       <p>
         <a href="https://www.linkedin.com/in/almeidapaixao/" target="_blank">
-          🔗 LinkedIn
+          🔗 linkedin.com/in/almeidapaixao
         </a>
       </p>
     </div>
